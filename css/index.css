@@ -1,0 +1,242 @@
+body {
+  margin: 0;
+  font-family: Calibri;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  height: 100vh;
+}
+.menu {
+  width: 100%;
+  position: fixed;
+  background: #ffffff;
+  display: grid;
+  grid-template-columns: 28% 72%;
+  grid-auto-rows: minmax(75px, auto);
+  height: auto;
+  z-index: 3;
+}
+.grid-head {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  margin-left: 200px;
+}
+.grid-head img {
+  max-width: 100%;
+}
+.grid-link-and-burger {
+  display: grid;
+  justify-content: start;
+  align-items: center;
+}
+.grid-a {
+  display: grid;
+  grid-template-columns: repeat(10, 8fr);
+  justify-content: start;
+  align-items: center;
+}
+.grid-a1 a {
+  color: #333333;
+  text-decoration: none;
+  margin-left: 30px;
+  font-size: 17px;
+}
+.grid-a a:hover {
+  opacity: 0.7;
+}
+.custom-container {
+  background-color: #e0e5eb;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  height: auto;
+}
+.right-container {
+  display: grid;
+  height: auto;
+  grid-template-columns: 47% 53%;
+}
+.right-content-container {
+  margin-top: 120px;
+  padding: 30px;
+  color: #333333;
+  position: relative;
+}
+.right-content-container p {
+  font-style: italic;
+}
+.right-content-container .image-link {
+  max-width: 100%;
+}
+
+.white-block {
+  background-color: white;
+  position: absolute;
+  top: 360px;
+  margin-right: 15%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 24%;
+  height: 250px;
+  z-index: 1;
+}
+.white-block h1 {
+  font-family: Arial;
+  margin: 22px;
+}
+.white-block p {
+  margin: 22px;
+  font-size: 17px;
+}
+.right-container {
+  display: grid;
+  height: auto;
+  grid-template-columns: 47% 53%;
+}
+
+.button {
+  margin-top: 5px;
+  background-color: transparent;
+  border: 2px solid #3d3d3d;
+  color: #3d3d3d;
+  padding: 10px 55px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.left-container {
+  display: grid;
+  height: auto;
+}
+.photo1-container {
+  display: grid;
+  grid-template-columns: 63% 37%;
+  margin-top: 210px;
+}
+.photo {
+  background-size: cover;
+  background-position: right;
+}
+.photo img {
+  max-width: 100%;
+}
+.photo2-container {
+  display: grid;
+  grid-template-columns: 46% 54%;
+  margin-top: 30px;
+  margin-bottom: 60px;
+}
+
+.footer {
+  background: #333333;
+  display: grid;
+  height: auto;
+  place-items: center;
+}
+
+.footer-text {
+  display: grid;
+  width: 28%;
+  color: white;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px;
+}
+#burger,
+[for="burger"] {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  [for="burger"] {
+    display: block;
+    text-align: end;
+    font-size: 60px;
+    margin-left: 80px;
+  }
+  nav {
+    display: none;
+    position: relative;
+    top: 0;
+    margin-top: 30px;
+  }
+  #burger:checked + label + nav {
+    display: block;
+  }
+  .menu {
+    width: 100%;
+    position: fixed;
+    grid-template-columns: 50% 50%;
+  }
+  .grid-head {
+    margin-left: 0px;
+    margin-top: 17px;
+    align-items: start;
+  }
+  .custom-container {
+    grid-template-columns: 100%;
+  }
+  .grid-a {
+    grid-template-columns: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+  .photo1-container {
+    grid-template-columns: 20% 80%;
+    margin-top: 150px;
+    margin-right: 20px;
+  }
+  .photo2-container {
+    display: grid;
+    grid-template-columns: 8% 60%;
+    margin-top: 20px;
+    margin-bottom: 0px;
+  }
+  .right-container {
+    grid-template-columns: 73% 27%;
+  }
+  .right-content-container {
+    margin-top: 0px;
+    padding: 20px;
+    padding-left: 30px;
+  }
+  .right-content-container .image-link {
+    content: url("img3_for_mobile.png");
+  }
+  .button {
+    padding: 10px 40px;
+    font-size: 15px;
+  }
+  .white-block {
+    top: 830px;
+    margin-right: 55px;
+    right: 0;
+    transform: translateY(-50%);
+    width: 63%;
+    height: 230px;
+    z-index: 1;
+  }
+  .white-block h1 {
+    font-family: Arial;
+    margin: 15px;
+    font-size: 25px;
+  }
+  .white-block p {
+    margin: 15px;
+    font-size: 17px;
+  }
+  .footer-text {
+    width: 80%;
+  }
+}
